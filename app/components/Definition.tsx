@@ -1,7 +1,7 @@
 import {Card} from '@/components/retroui/Card'
 import {Text} from '@/components/retroui/Text'
-import codePointToChar from '@/app/utils/unicodeToChar.ts'
-import parsePinyinAccent from '@/app/utils/parsePinyinAccent.ts'
+import codePointToChar from '@/app/utils/unicodeToChar'
+import parsePinyinAccent from '@/app/utils/parsePinyinAccent'
 import CharacterInfo from '@/app/page'
 
 type Props = {
