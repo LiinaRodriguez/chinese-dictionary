@@ -3,7 +3,18 @@ import {Text} from '@/components/retroui/Text'
 import codePointToChar from '@/app/utils/unicodeToChar'
 import parsePinyinAccent from '@/app/utils/parsePinyinAccent'
 
-export default function Definition({pinyin, results}){
+type CharacterInfo = {
+  uvalue: string;
+  kMandarin: string;
+  kDefinition?: string;
+};
+
+type Props = {
+  pinyin: string;
+  results: CharacterInfo[];
+};
+
+export default function Definition({pinyin, results}:Props){
   return(
     <div className="flex flex-col items-center justify-center">
       <Text as="h3" className="text-primary-hover">Resultados para  &quot;{pinyin}&quot; </Text>
