@@ -6,10 +6,9 @@ type Props = {
   pinyin: string;
   setPinyin: (value: string) => void;
   onSearch: () => void;
-  loading: boolean;
 };
 
-export default function SearchBar({pinyin, setPinyin, onSearch, loading}: Props) {
+export default function SearchBar({pinyin, setPinyin, onSearch}: Props) {
   return (
     <div className="flex flex-col m-4">
     <div className="flex flex-row">

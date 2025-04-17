@@ -35,11 +35,6 @@ export default function Home() {
     }
   };
 
-  const codePointToChar = (uvalue: string) => {
-    const code = parseInt(uvalue.replace("U+", ""), 16);
-    return String.fromCodePoint(code);
-  };
-
   return (
    <div className="flex flex-col justify-center items-center m-5 py-4 px-2">
      <Text className="text-primary-hover font-sans" as="h1">Chinese dictionary</Text>

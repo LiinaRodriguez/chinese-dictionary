@@ -12,17 +12,17 @@ type Props = {
 export default function Definition({pinyin, results}:Props){
   return(
     <div className="flex flex-col items-center justify-center">
-      <Text as="h3" className="text-primary-hover">Resultados para "{pinyin}"</Text>
+      <Text as="h3" className="text-primary-hover">Resultados para  &quot;{pinyin}&quot; </Text>
       {results.length ===0 ? (
-        <Text className="font-sans" as="p">No se encontraron resultados para "{pinyin}"</Text>
+        <Text className="font-sans" as="p">No se encontraron resultados para &quot;{pinyin}&quot;</Text>
       ): results.map((entry, index) =>(
-          <Card className="md:min-w-190 min-w-full my-2">
+          <Card key = {index} className="md:min-w-190 min-w-full my-2">
               <Card.Header>
                 <Card.Title className="font-serif">{codePointToChar(entry.uvalue)}</Card.Title>
                 <Card.Description className="font-sans flex flex-row gap-2">
                   <Text as="p" >{parsePinyinAccent(entry.kMandarin.toLowerCase())}</Text>
-                  <Text as="p" className="text-primary-hover font-bold">{"  ·  "} </Text>
-                  <Text as="p" >{(entry.kDefinition ?  entry.kDefinition: "")}</Text>
+                  <Text as="p" className="text-primary-hover font-bold">{'  ·  '} </Text>
+                  <Text as="p" >{(entry.kDefinition ?  entry.kDefinition: '')}</Text>
                 </Card.Description>
               </Card.Header>
             </Card>

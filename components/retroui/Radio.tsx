@@ -40,6 +40,7 @@ const radioIndicatorVariants = cva("flex ", {
   },
 });
 
+/* eslint-disable-next-line @typescript-eslint/no-empty-object-type */
 interface RadioGroupProps
   extends React.ComponentProps<typeof RadioPrimitive.Root> {}
 

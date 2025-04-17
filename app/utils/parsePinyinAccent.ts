@@ -13,6 +13,7 @@ const convertSyllable = (syllable: string): string => {
   const match = syllable.match(/^([a-zü]+)([1-5])$/i);
   if (!match) return syllable;
 
+  /* eslint-disable-next-line  @typescript-eslint/no-unused-vars */
   const [_, base, toneStr] = match;
   const tone = parseInt(toneStr, 10);
 
