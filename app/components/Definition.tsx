@@ -4,9 +4,9 @@ import codePointToChar from '@/app/utils/unicodeToChar'
 import parsePinyinAccent from '@/app/utils/parsePinyinAccent'
 
 type CharacterInfo = {
-  uvalue: string;
   kMandarin: string;
-  kDefinition?: string;
+  kDefinition: string | null;
+  uvalue: string;
 };
 
 type Props = {
